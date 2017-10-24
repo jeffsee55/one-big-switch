@@ -1,0 +1,13 @@
+<h3><%= @post.name %></h3>
+<hr>
+<p><%= @post.body %></p>
+<%= link_to 'All posts', posts_path %>
+
+<h1>Comments</h1>
+<hr>
+<% @post.comments.each do |comment| %>
+  <div>
+    <%= comment.body %>
+  </div>
+  <hr>
+<% end %>
